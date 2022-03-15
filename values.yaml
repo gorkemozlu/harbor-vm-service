@@ -1,0 +1,13 @@
+#@data/values
+---
+name: harbor
+vm:
+  name: harbor
+  namespace: gorkem-ns1
+  imagename: centos-stream-8-vmservice-v1alpha1-1619529007339
+  classname: best-effort-small
+  network_type: vsphere-distributed # or nsx-t
+  network_name: "network-1" # kubectl get network -n namespace
+storage:
+  class_name: default
+  pvc_size: 10Gi
